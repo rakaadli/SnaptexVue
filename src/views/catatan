@@ -1,0 +1,16 @@
+ <!-- <p> -->
+  <!-- Page Preloder -->
+  <!-- <div id="preloder">
+      <div class="loader"></div>
+  </div>-->
+  <!-- </p> -->
+
+  success
+
+  'name' : this.CustomerInfo.name,
+        'email' : this.CustomerInfo.email,
+        'number' : this.CustomerInfo.number,
+        'address' : this.CustomerInfo.address,
+        "transaction_total": this.totalBiaya,
+        "transaction_status" : "PENDING",
+        "transaction_details" : productIds
