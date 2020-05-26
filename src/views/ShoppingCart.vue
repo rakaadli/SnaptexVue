@@ -136,7 +136,7 @@
                     </li>
                     <li class="subtotal mt-3">
                       Nama Penerima
-                      <span>Shayna</span>
+                      <span>Snaptex</span>
                     </li>
                   </ul>
                   <a @click="checkout()" href="#" class="proceed-btn">I ALREADY PAID</a>

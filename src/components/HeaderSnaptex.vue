@@ -6,10 +6,10 @@
         <div class="container">
           <div class="ht-left">
             <div class="mail-service">
-              <i class="fa fa-envelope"></i> hello.shayna@gmail.com
+              <i class="fa fa-envelope"></i> hello.snaptex@gmail.com
             </div>
             <div class="phone-service">
-              <i class="fa fa-phone"></i> +628 22081996
+              <i class="fa fa-phone"></i> +628785467864
             </div>
           </div>
         </div>
@@ -20,7 +20,7 @@
             <div class="col-lg-2 col-md-2">
               <div class="logo">
                 <a href="./index.html">
-                  <img src="img/logo_website_shayna.png" alt />
+                  <span class="text-secondary">SNAPTEX</span>
                 </a>
               </div>
             </div>
@@ -91,10 +91,18 @@ export default {
     };
   },
   methods: {
-    removeItem(index) {
+    removeItem(idx) {
+      //cari tau id item yang akan dihapus
+      let keranjangUserStorage = JSON.parse(
+        localStorage.getItem("keranjangUser")
+      );
+      let itemKeranjangUserStorage = keranjangUserStorage.map(
+        itemKeranjangUserStorage => itemKeranjangUserStorage.id
+      );
+
+      //cari idx dengan id yang ada di storage
+      let index = itemKeranjangUserStorage.findIndex(id => id == idx);
       this.keranjangUser.splice(index, 1);
-      const parsed = JSON.stringify(this.keranjangUser);
-      localStorage.setItem("keranjangUser", parsed);
     }
   },
   mounted() {
